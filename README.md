@@ -1,4 +1,8 @@
-# Flask + PostgreSQL — Dockerized Web Application
+## 🚀 Version 1.0 — Stable Release
+
+This project is production-ready at a basic level and prepared for deployment.# Flask + PostgreSQL — Dockerized Web Application
+
+## Flask + PostgreSQL — Dockerized Web Application
 
 ## 🚀 What This Does
 A fully containerized web application built with Flask and PostgreSQL.  
