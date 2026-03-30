@@ -134,9 +134,8 @@ flask-docker-app/
 
 ---
 
-## 🔮 Future Improvements (Roadmap)
+## 🔮 Future Improvements
 
-- Deploy on AWS EC2  
 - Add CI/CD using GitHub Actions  
 - Use Kubernetes for orchestration  
 - Add Terraform for infrastructure  
