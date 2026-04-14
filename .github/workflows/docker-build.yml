@@ -1,0 +1,29 @@
+name: Docker Build CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: docker/setup-buildx-action@v2
+
+    - run: docker build -t flask-app:test .
+
+    - run: docker images | grep flask-app
+
+    - run: |
+        docker run --rm flask-app:test python -c "
+import flask
+import psycopg2
+print('All imports OK!')
+"
+
+    - run: echo "Build successful"
