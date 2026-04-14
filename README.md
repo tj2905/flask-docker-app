@@ -27,6 +27,8 @@ This project demonstrates real-world DevOps practices using Docker.
 ---
 
 ## 🧱 Architecture
+
+
 Browser
 ↓
 Flask Container (port 5000)
@@ -34,6 +36,7 @@ Flask Container (port 5000)
 PostgreSQL Container
 ↓
 pgdata Volume (persistent storage)
+
 
 ---
 
@@ -60,33 +63,33 @@ pgdata Volume (persistent storage)
 
 1. Create a `.env` file in project root:
 
-```env
+
 DB_NAME=myapp
 DB_USER=user
 DB_PASSWORD=password
 DB_HOST=db
 
+
 2. Run the project:
 
 docker compose up -d
-
-3. Open in browser:
-
+Open in browser:
 http://localhost:5000
 
-📊 Expected Output
+## 📊 Expected Output
 
 Page visited X times!
+
 Count increases on refreshing.
 
-🐳 Docker Hub
+## 🐳 Docker Hub
 
 You can directly pull and run the app:
 
 docker pull tj2905/flask-devops-app:v1.0
 docker run -p 5000:5000 tj2905/flask-devops-app:v1.0
 
-📁 Project Structure
+## 📁 Project Structure
 
 flask-docker-app/
 ├── app.py
@@ -98,7 +101,8 @@ flask-docker-app/
 ├── .dockerignore
 └── README.md
 
-🧠 Concepts Demonstrated
+## 🧠 Concepts Demonstrated
+
 - Docker image building
 - Multi-container architecture
 - Container networking
@@ -108,11 +112,12 @@ flask-docker-app/
 - Restart policies
 - Secure configuration management
 
-🔮 Future Improvements
+## 🔮 Future Improvements
+
 - Add CI/CD using GitHub Actions
 - Use Kubernetes for orchestration
 - Add Terraform for infrastructure
 
-💡 Author
+## 💡 Author
 
 Built as part of DevOps learning journey 🚀
