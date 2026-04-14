@@ -20,7 +20,6 @@ def get_connection():
 
 @app.route("/")
 def home():
-
     conn = get_connection()
     cur = conn.cursor()
 
@@ -43,6 +42,18 @@ def home():
     conn.close()
 
     return f"Page visited {count} times!"
+
+
+# Health endpoint
+@app.route("/health")
+def health():
+    try:
+        conn = get_connection()
+        conn.close()
+        return {"status": "healthy", "database": "connected"}, 200
+    except Exception as e:
+        return {"status": "unhealthy", "error": str(e)}, 500
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
