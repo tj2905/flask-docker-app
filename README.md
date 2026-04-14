@@ -28,6 +28,9 @@ This project demonstrates real-world DevOps practices using Docker.
 
 ## 🧱 Architecture
 
+![Architecture](docs/architecture.png)
+
+### Flow
 
 Browser
 ↓
